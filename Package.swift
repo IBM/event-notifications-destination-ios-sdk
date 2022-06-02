@@ -1,4 +1,4 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.0
 
 /**
  (C) Copyright IBM Corp. 2021.
@@ -20,6 +20,7 @@ import PackageDescription
 
 let package = Package(
     name: "ENPushDestination",
+    platforms: [.iOS(.v10)],
     products: [
         .library(name: "ENPushDestination", targets: ["ENPushDestination"]),
     ],
@@ -27,7 +28,7 @@ let package = Package(
         .package(url: "https://github.com/IBM/swift-sdk-core.git", from: "1.2.1"),
     ],
     targets: [
-        .target(name: "ENPushDestination", dependencies: ["IBMSwiftSDKCore"], path: "ENPushDestination/Internal"),
+        .target(name: "ENPushDestination", dependencies: ["IBMSwiftSDKCore"], path: "ENPushDestination"),
         .testTarget(name: "ENPushDestinationTests", dependencies: ["ENPushDestination"]),
     ]
 )

@@ -192,9 +192,9 @@
 		5636F0B727BCD5C400F3FD1C = {
 			isa = PBXGroup;
 			children = (
+				569B793428488E9B00FDC45B /* Tests */,
 				5606EEBD27C69EF90034029B /* .swiftlint.yml */,
 				5636F0C327BCD5C500F3FD1C /* ENPushDestination */,
-				5636F0CF27BCD5C500F3FD1C /* ENPushDestinationTests */,
 				5636F10327BCD6D700F3FD1C /* ENPushTestApp */,
 				5636F12227BCD8F800F3FD1C /* ENExtensionApp */,
 				5636F0C227BCD5C500F3FD1C /* Products */,
@@ -302,6 +302,14 @@
 				5636F13127BCE5D300F3FD1C /* ENPushUtilsTests.swift */,
 			);
 			path = Internal;
+			sourceTree = "<group>";
+		};
+		569B793428488E9B00FDC45B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5636F0CF27BCD5C500F3FD1C /* ENPushDestinationTests */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		68B73EB224F6265CD29335EC /* Pods */ = {
