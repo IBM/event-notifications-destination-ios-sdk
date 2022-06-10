@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.com/IBM/event-notifications-destination-ios-sdk.svg?token=eW5FVD71iyte6tTby8gr&branch=main)](https://travis-ci.com/IBM/event-notifications-destination-ios-sdk)
 
 
-# iOS destination SDK for IBM Cloud Event Notifications service Version 0.0.2
+# iOS destination SDK for IBM Cloud Event Notifications service Version 0.0.3
 iOS destination client library to interact with various [IBM Cloud Event Notifications Service](https://cloud.ibm.com/apidocs?category=event-notifications).
 
 Disclaimer: this SDK is being released initially as a **pre-release** version.
@@ -12,7 +12,6 @@ Changes might occur which impact applications that use this SDK.
 
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-  * [Gradle](#gradle)
 - [Using the SDK](#using-the-sdk)
 - [Questions](#questions)
 - [Issues](#issues)
@@ -37,12 +36,12 @@ Service Name | Artifact Coordinates
 * An [IBM Cloud][ibm-cloud-onboarding] account.
 * An Event Notifications Instance
 * An IAM API key to allow the SDK to access your account. Create one [here](https://cloud.ibm.com/iam/apikeys).
-* Xcode 9.3+
+* Xcode 10+
 * Swift 4.2+
-* iOS 10.0+
+* iOS 12.0+
 
 ## Installation
-The current version of this SDK is: 0.0.1
+The current version of this SDK is: 0.0.3
 
 To use the Event Notifications iOS destination SDK, define a dependency that contains the artifact coordinates (group id, artifact id and version) for the service, like this:
 
@@ -52,7 +51,7 @@ To use the Event Notifications iOS destination SDK, define a dependency that con
 use_frameworks!
 
 target 'MyApp' do
-    pod 'ENPushDestination', '~> 0.0.2'
+    pod 'ENPushDestination', '~> 0.0.3'
 end
 ```
 
@@ -61,7 +60,7 @@ end
 To install `ENPushDestination` using Carthage, add the following to your Cartfile.
 
 ```ruby
-  github "IBM/event-notifications-destination-ios-sdk" ~> 0.0.2
+  github "IBM/event-notifications-destination-ios-sdk" ~> 0.0.3
 ```
 
 Then run the following command to build the dependencies and frameworks:
@@ -75,7 +74,7 @@ $ carthage update --platform iOS
 Add the following to your `Package.swift` file to identify ENPushDestination as a dependency. The package manager will clone ENPushDestination when you build your project with swift build.
 ```ruby
 dependencies: [
-    .package(url: "https://github.com/IBM/event-notifications-destination-ios-sdk", from: "0.0.1")
+    .package(url: "https://github.com/IBM/event-notifications-destination-ios-sdk", from: "0.0.3")
 ]
 ```
 

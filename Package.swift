@@ -20,7 +20,7 @@ import PackageDescription
 
 let package = Package(
     name: "ENPushDestination",
-    platforms: [.iOS(.v10)],
+    platforms: [.iOS(.v12)],
     products: [
         .library(name: "ENPushDestination", targets: ["ENPushDestination"]),
     ],
