@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
 
     s.name                  = 'ENPushDestination'
-    s.version               = '0.0.2'
+    s.version               = '0.0.3'
     s.summary               = 'iOS Destination SDK for IBM Cloud Event Notifications service'
     s.license               = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
     s.homepage              = 'https://github.com/IBM/event-notifications-destination-ios-sdk'
     s.authors               = 'IBM Cloud Event Notifications.'
     
     s.module_name           = 'ENPushDestination'
-    s.ios.deployment_target = '10.0'
+    s.ios.deployment_target = '12.0'
     s.source                = { :git => 'https://github.com/IBM/event-notifications-destination-ios-sdk.git', :tag => s.version.to_s }
   
     s.dependency 'IBMSwiftSDKCore', '~> 1.2.1'

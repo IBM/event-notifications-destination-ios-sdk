@@ -188,7 +188,7 @@ class ENPushTests: XCTestCase {
         
         let expectationNoInit = XCTestExpectation(description: "Should return error")
         sut.registerWithDeviceToken(deviceToken: token!, withUserId: "userId") { response, statusCode, error in
-            XCTAssertEqual(statusCode, ENPushErrorvalues.ENPushRegistrationError.rawValue)
+            XCTAssertEqual(statusCode, 400)
             expectationNoInit.fulfill()
         }
         
@@ -198,7 +198,7 @@ class ENPushTests: XCTestCase {
         
         let expectationEmptyUser = XCTestExpectation(description: "Should return error")
         sut.registerWithDeviceToken(deviceToken: token!, withUserId: "") { response, statusCode, error in
-            XCTAssertEqual(statusCode, ENPushErrorvalues.ENPushRegistrationError.rawValue)
+            XCTAssertEqual(statusCode, 400)
             expectationEmptyUser.fulfill()
         }
 
@@ -268,6 +268,10 @@ extension UNUserNotificationCenter {
 }
 
 class EnRestMock: ENRestProtocol {
+    func responseVoid(completionHandler: @escaping (String?, Int, String) -> Void) {
+        
+    }
+    
     
     
     func responseObject<T>(completionHandler: @escaping (T?, Int, String) -> Void) where T : Decodable {

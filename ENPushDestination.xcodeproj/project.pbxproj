@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		2E3637946D1F907490F2002A /* Pods_ENPushDestination.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D729995DE6DCCBEB6799B87 /* Pods_ENPushDestination.framework */; };
 		5606EEBE27C69EF90034029B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 5606EEBD27C69EF90034029B /* .swiftlint.yml */; };
-		5636F0C627BCD5C500F3FD1C /* ENPushDestination.docc in Sources */ = {isa = PBXBuildFile; fileRef = 5636F0C527BCD5C500F3FD1C /* ENPushDestination.docc */; };
 		5636F0CC27BCD5C500F3FD1C /* ENPushDestination.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5636F0C127BCD5C500F3FD1C /* ENPushDestination.framework */; };
 		5636F0D227BCD5C500F3FD1C /* ENPushDestination.h in Headers */ = {isa = PBXBuildFile; fileRef = 5636F0C427BCD5C500F3FD1C /* ENPushDestination.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5636F0E227BCD60700F3FD1C /* ENPushErrorValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5636F0DB27BCD60600F3FD1C /* ENPushErrorValues.swift */; };
 		5636F0E327BCD60700F3FD1C /* ENPushClientOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5636F0DC27BCD60600F3FD1C /* ENPushClientOptions.swift */; };
 		5636F0E527BCD60700F3FD1C /* ENPushNotificationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5636F0DE27BCD60700F3FD1C /* ENPushNotificationAction.swift */; };
 		5636F0E627BCD60700F3FD1C /* ENPushNotificationActionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5636F0DF27BCD60700F3FD1C /* ENPushNotificationActionCategory.swift */; };
@@ -36,8 +34,6 @@
 		5636F11127BCD6D800F3FD1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5636F10F27BCD6D800F3FD1C /* LaunchScreen.storyboard */; };
 		5636F11727BCD75A00F3FD1C /* ENPushDestination.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5636F0C127BCD5C500F3FD1C /* ENPushDestination.framework */; platformFilter = ios; };
 		5636F11827BCD75A00F3FD1C /* ENPushDestination.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5636F0C127BCD5C500F3FD1C /* ENPushDestination.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5636F12427BCD8F800F3FD1C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5636F12327BCD8F800F3FD1C /* NotificationService.swift */; };
-		5636F12827BCD8F800F3FD1C /* ENExtensionApp.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5636F12127BCD8F800F3FD1C /* ENExtensionApp.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5636F13227BCE5D300F3FD1C /* ENLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5636F12E27BCE5D300F3FD1C /* ENLoggerTests.swift */; };
 		5636F13327BCE5D300F3FD1C /* ENLocalPushNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5636F12F27BCE5D300F3FD1C /* ENLocalPushNotificationTests.swift */; };
 		5636F13427BCE5D300F3FD1C /* ENPushUrlBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5636F13027BCE5D300F3FD1C /* ENPushUrlBuilderTests.swift */; };
@@ -65,13 +61,6 @@
 			remoteGlobalIDString = 5636F0C027BCD5C500F3FD1C;
 			remoteInfo = ENPushDestination;
 		};
-		5636F12627BCD8F800F3FD1C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5636F0B827BCD5C400F3FD1C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5636F12027BCD8F800F3FD1C;
-			remoteInfo = ENExtensionApp;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -92,7 +81,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				5636F12827BCD8F800F3FD1C /* ENExtensionApp.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,9 +94,7 @@
 		5606EEBD27C69EF90034029B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		5636F0C127BCD5C500F3FD1C /* ENPushDestination.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ENPushDestination.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5636F0C427BCD5C500F3FD1C /* ENPushDestination.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ENPushDestination.h; sourceTree = "<group>"; };
-		5636F0C527BCD5C500F3FD1C /* ENPushDestination.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ENPushDestination.docc; sourceTree = "<group>"; };
 		5636F0CB27BCD5C500F3FD1C /* ENPushDestinationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ENPushDestinationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5636F0DB27BCD60600F3FD1C /* ENPushErrorValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENPushErrorValues.swift; sourceTree = "<group>"; };
 		5636F0DC27BCD60600F3FD1C /* ENPushClientOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENPushClientOptions.swift; sourceTree = "<group>"; };
 		5636F0DE27BCD60700F3FD1C /* ENPushNotificationAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENPushNotificationAction.swift; sourceTree = "<group>"; };
 		5636F0DF27BCD60700F3FD1C /* ENPushNotificationActionCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENPushNotificationActionCategory.swift; sourceTree = "<group>"; };
@@ -133,7 +119,6 @@
 		5636F11027BCD6D800F3FD1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5636F11227BCD6D800F3FD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5636F11C27BCD8D600F3FD1C /* ENPushTestApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ENPushTestApp.entitlements; sourceTree = "<group>"; };
-		5636F12127BCD8F800F3FD1C /* ENExtensionApp.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ENExtensionApp.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		5636F12327BCD8F800F3FD1C /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		5636F12527BCD8F800F3FD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5636F12E27BCE5D300F3FD1C /* ENLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENLoggerTests.swift; sourceTree = "<group>"; };
@@ -179,13 +164,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5636F11E27BCD8F800F3FD1C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -209,7 +187,6 @@
 				5636F0C127BCD5C500F3FD1C /* ENPushDestination.framework */,
 				5636F0CB27BCD5C500F3FD1C /* ENPushDestinationTests.xctest */,
 				5636F10227BCD6D700F3FD1C /* ENPushTestApp.app */,
-				5636F12127BCD8F800F3FD1C /* ENExtensionApp.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,13 +197,11 @@
 				5636F0EB27BCD67500F3FD1C /* Internal */,
 				5636F0E927BCD60D00F3FD1C /* ENPush.swift */,
 				5636F0DC27BCD60600F3FD1C /* ENPushClientOptions.swift */,
-				5636F0DB27BCD60600F3FD1C /* ENPushErrorValues.swift */,
 				5636F0DE27BCD60700F3FD1C /* ENPushNotificationAction.swift */,
 				5636F0DF27BCD60700F3FD1C /* ENPushNotificationActionCategory.swift */,
 				5636F0E027BCD60700F3FD1C /* ENPushObserver.swift */,
 				5636F0E127BCD60700F3FD1C /* ENPushRichPushNotificationOptions.swift */,
 				5636F0C427BCD5C500F3FD1C /* ENPushDestination.h */,
-				5636F0C527BCD5C500F3FD1C /* ENPushDestination.docc */,
 			);
 			path = ENPushDestination;
 			sourceTree = "<group>";
@@ -395,29 +370,11 @@
 			);
 			dependencies = (
 				5636F11A27BCD75A00F3FD1C /* PBXTargetDependency */,
-				5636F12727BCD8F800F3FD1C /* PBXTargetDependency */,
 			);
 			name = ENPushTestApp;
 			productName = ENPushTestApp;
 			productReference = 5636F10227BCD6D700F3FD1C /* ENPushTestApp.app */;
 			productType = "com.apple.product-type.application";
-		};
-		5636F12027BCD8F800F3FD1C /* ENExtensionApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5636F12927BCD8F800F3FD1C /* Build configuration list for PBXNativeTarget "ENExtensionApp" */;
-			buildPhases = (
-				5636F11D27BCD8F800F3FD1C /* Sources */,
-				5636F11E27BCD8F800F3FD1C /* Frameworks */,
-				5636F11F27BCD8F800F3FD1C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ENExtensionApp;
-			productName = ENExtensionApp;
-			productReference = 5636F12127BCD8F800F3FD1C /* ENExtensionApp.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -438,9 +395,6 @@
 					5636F10127BCD6D700F3FD1C = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
-					5636F12027BCD8F800F3FD1C = {
-						CreatedOnToolsVersion = 13.2.1;
-					};
 				};
 			};
 			buildConfigurationList = 5636F0BB27BCD5C400F3FD1C /* Build configuration list for PBXProject "ENPushDestination" */;
@@ -459,7 +413,6 @@
 				5636F0C027BCD5C500F3FD1C /* ENPushDestination */,
 				5636F0CA27BCD5C500F3FD1C /* ENPushDestinationTests */,
 				5636F10127BCD6D700F3FD1C /* ENPushTestApp */,
-				5636F12027BCD8F800F3FD1C /* ENExtensionApp */,
 			);
 		};
 /* End PBXProject section */
@@ -487,13 +440,6 @@
 				5636F11127BCD6D800F3FD1C /* LaunchScreen.storyboard in Resources */,
 				5636F10E27BCD6D800F3FD1C /* Assets.xcassets in Resources */,
 				5636F10C27BCD6D700F3FD1C /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5636F11F27BCD8F800F3FD1C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,8 +583,6 @@
 				5636F0E627BCD60700F3FD1C /* ENPushNotificationActionCategory.swift in Sources */,
 				5636F0E527BCD60700F3FD1C /* ENPushNotificationAction.swift in Sources */,
 				5636F0FC27BCD68600F3FD1C /* ENTagModel.swift in Sources */,
-				5636F0C627BCD5C500F3FD1C /* ENPushDestination.docc in Sources */,
-				5636F0E227BCD60700F3FD1C /* ENPushErrorValues.swift in Sources */,
 				5636F0F527BCD68600F3FD1C /* ENLogger.swift in Sources */,
 				5636F0FB27BCD68600F3FD1C /* ENSubscriptionsModel.swift in Sources */,
 			);
@@ -669,14 +613,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5636F11D27BCD8F800F3FD1C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5636F12427BCD8F800F3FD1C /* NotificationService.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -690,11 +626,6 @@
 			platformFilter = ios;
 			target = 5636F0C027BCD5C500F3FD1C /* ENPushDestination */;
 			targetProxy = 5636F11927BCD75A00F3FD1C /* PBXContainerItemProxy */;
-		};
-		5636F12727BCD8F800F3FD1C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5636F12027BCD8F800F3FD1C /* ENExtensionApp */;
-			targetProxy = 5636F12627BCD8F800F3FD1C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -770,7 +701,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -828,7 +759,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -854,7 +785,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -885,7 +816,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -968,7 +899,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "EN dev Provisioning Profile";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1002,63 +933,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "EN dev Provisioning Profile";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		5636F12A27BCD8F800F3FD1C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TN6YQNGLXP;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ENExtensionApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ENExtensionApp;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.cloud.eventnotifications.ENPushTestApp.ENExtensionApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "EN extenstion";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		5636F12B27BCD8F800F3FD1C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TN6YQNGLXP;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ENExtensionApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ENExtensionApp;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.cloud.eventnotifications.ENPushTestApp.ENExtensionApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "EN extenstion";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1097,15 +972,6 @@
 			buildConfigurations = (
 				5636F11327BCD6D800F3FD1C /* Debug */,
 				5636F11427BCD6D800F3FD1C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5636F12927BCD8F800F3FD1C /* Build configuration list for PBXNativeTarget "ENExtensionApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5636F12A27BCD8F800F3FD1C /* Debug */,
-				5636F12B27BCD8F800F3FD1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
