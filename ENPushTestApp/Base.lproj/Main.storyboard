@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -22,8 +23,8 @@
                                     <constraint firstAttribute="height" constant="50" id="blV-6O-gnF"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="p3S-ll-iFf"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Clear"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Clear"/>
                                 <connections>
                                     <action selector="clearAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfR-2N-He0"/>
                                 </connections>
@@ -36,32 +37,32 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="q5r-ME-Oxg"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Register"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Register"/>
                                         <connections>
                                             <action selector="registerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iKR-kE-ZxH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDx-fm-dtD">
                                         <rect key="frame" x="0.0" y="77" width="364" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Un-Register"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Un-Register"/>
                                         <connections>
                                             <action selector="unRegisterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xey-EC-9SU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmc-yC-c96">
                                         <rect key="frame" x="0.0" y="154" width="364" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Subscribe to Tag"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Subscribe to Tag"/>
                                         <connections>
                                             <action selector="subscribeToTags:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vxM-KJ-1OS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzM-c7-vWe">
                                         <rect key="frame" x="0.0" y="231" width="364" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Un-Subscribe from Tag"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Un-Subscribe from Tag"/>
                                         <connections>
                                             <action selector="unSubscribeToTags:" destination="BYZ-38-t0r" eventType="touchUpInside" id="22p-yk-PyR"/>
                                         </connections>
@@ -85,7 +86,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tuU-4t-ggT" secondAttribute="trailing" constant="25" id="1wQ-s6-wLm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="axJ-t3-AqP" secondAttribute="trailing" constant="25" id="8Dc-JT-dud"/>
                             <constraint firstItem="Byx-Vp-80n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="J96-zl-wm8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Byx-Vp-80n" secondAttribute="trailing" constant="25" id="Nyx-9Q-4Jl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Byx-Vp-80n" secondAttribute="trailing" id="Nyx-9Q-4Jl"/>
+                            <constraint firstItem="Byx-Vp-80n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="999" constant="280" id="RlK-pI-F8E"/>
                             <constraint firstItem="tuU-4t-ggT" firstAttribute="top" secondItem="axJ-t3-AqP" secondAttribute="bottom" constant="25" id="UvU-Vp-NE3"/>
                             <constraint firstItem="axJ-t3-AqP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="bKQ-eH-j67"/>
                             <constraint firstItem="tuU-4t-ggT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="bdP-vz-uLo"/>

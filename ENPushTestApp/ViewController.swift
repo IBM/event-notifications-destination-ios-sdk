@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         let guid = "<Event-notifications-instance-guid>"
         let apikey = "<Event-notifications-apikey>"
         let destId = "<Event-notifications-ios-destinationid>"
-        
+
         push = ENPush.sharedInstance
         push?.setCloudRegion(region: .usSouth)
         push?.initialize(guid, destId, apikey)
@@ -34,9 +34,12 @@ class ViewController: UIViewController {
     @IBAction func registerAction(_ sender: UIButton) {
         textView.insertText("\nStart registering device\n")
 
-        let appdelgare = UIApplication.shared.delegate as! AppDelegate
+        guard let appdelgare = UIApplication.shared.delegate as? AppDelegate, let token = appdelgare.devicetoken else {
+            self.addText("Error: No token")
+            return
+        }
         
-        ENPush.sharedInstance.registerWithDeviceToken(deviceToken: appdelgare.devicetoken!, withUserId: "userId") { response, statusCode, error in
+        ENPush.sharedInstance.registerWithDeviceToken(deviceToken: token, withUserId: "userId") { response, statusCode, error in
             
             guard error.isEmpty else {
                 self.addText("Error: \(error)")
@@ -69,7 +72,8 @@ class ViewController: UIViewController {
         
         addText("Start unRegistering device")
         ENPush.sharedInstance.unregisterDevice { response, statusCode, error in
-            
+            print(response ?? "")
+            print(error)
         }
     }
     

@@ -3,3 +3,6 @@ xcuserdata/
 *.xcuserstate
 .build
 .DS_Store
+pods
+Podfile.lock
+*.xcworkspace

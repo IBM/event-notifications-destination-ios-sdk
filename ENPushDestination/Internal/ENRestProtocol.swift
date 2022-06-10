@@ -26,6 +26,8 @@ import IBMSwiftSDKCore
 
 protocol ENRestProtocol {
     func responseObject<T: Decodable>(completionHandler: @escaping (T?, Int, String) -> Void)
+    func responseVoid(completionHandler: @escaping (String?, Int, String) -> Void)
+
     func initRest(
         apikey: String,
         method: String,
@@ -75,6 +77,23 @@ class ENRestDefault: ENRestProtocol {
             }
             completionHandler(response?.result, statusCode, "")
         }
+    }
+    
+    func responseVoid(completionHandler: @escaping (String?, Int, String) -> Void) {
+        
+        request?.responseVoid(completionHandler: { response, error in
+            
+            guard error == nil else {
+                completionHandler(nil, response?.statusCode ?? ENPUSH_NETWORK_ERROR, error.debugDescription)
+                return
+            }
+            
+            guard response != nil, let statusCode = response?.statusCode else {
+                completionHandler(nil, response?.statusCode ?? ENPUSH_NETWORK_ERROR, "Empty response")
+                return
+            }
+            completionHandler(nil, statusCode, "")
+        })
     }
     
    private func responseDecoder(response: RestResponse<ENDeviceModel>?, error: RestError?) -> Int {
