@@ -275,6 +275,36 @@ override func didReceive(_ request: UNNotificationRequest, withContentHandler co
     ENPushRichPushNotificationOptions.didReceive(request, withContentHandler: contentHandler)
 }
 ```
+### Sending Delivery Status for notifications
+
+You can send notification status (SEEN/OPEN) back to Event Notifiation service, implement sendDeliveryStatus function to use this.
+
+Based on when notification was received by intercepting the notification, you can send back SEEN and when its opened you can send back OPEN. 
+
+To use this function example is given below 
+
+
+For status open - 
+
+```swift
+ENPush.sharedInstance.sendDeliveryStatus(notificationId:"en_nid",status: ENDeliveryStatus.open){ response, statusCode, error in
+            guard error.isEmpty else {
+                return
+            }
+            print(response ?? "")
+        }
+```
+
+For status seen - 
+
+```swift
+ENPush.sharedInstance.sendDeliveryStatus(notificationId:"en_nid",status: ENDeliveryStatus.seen){ response, statusCode, error in
+            guard error.isEmpty else {
+                return
+            }
+            print(response ?? "")
+        }
+```
 
 ## Questions
 
