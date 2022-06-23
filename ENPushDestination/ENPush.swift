@@ -23,6 +23,15 @@
 import Foundation
 import UIKit
 
+/**
+ Delivery status accepted by Event Notification
+ */
+
+public enum ENDeliveryStatus: String {
+    case seen = "SEEN"
+    case open = "OPEN"
+}
+
 public class ENPush: NSObject {
     
     // MARK: Properties (Private)
@@ -217,6 +226,95 @@ public class ENPush: NSObject {
         } else {
             ENLogger.sharedInstance.logger(logLevel: .error, message: "Error while registration -  invalid / missing credentials")
             self.delegate?.onChangePermission(status: false)
+        }
+    }
+    
+    
+    // MARK: Methods (Public)
+    
+    /**
+     
+     This Method is used to send notification status (SEEN/OPEN) to IBM Cloud Event Notifications service.
+     
+     Call this method after receiving a notification with notification_id as en_id
+
+     
+     - Parameter notificationId: This is the notification id received as en_id in notification payload
+     - Parameter status: Enum with either SEEN/OPEN
+     - Parameter completionHandler: The closure that will be called when this request finishes. The response will contain response (String), StatusCode (Int) and error (string).
+     */
+    
+    public func sendDeliveryStatus (notificationId: String,status: ENDeliveryStatus, completionHandler: @escaping(_ response: String?, _ statusCode: Int?, _ error: String) -> Void) {
+        if isInitialized {
+            sendNotificationStatus(notificationId: notificationId, status: status, completionHandler: completionHandler)
+        } else {
+            ENLogger.sharedInstance.logger(logLevel: .error, message: "Error while sending delivery status - ENPush is not initialized")
+            completionHandler(nil,400, "Error while sending delivery status - ENPush is not initialized")
+        }
+    }
+    
+    // MARK: Methods (Internal)
+    
+    /**
+     Send notification status
+     - Parameter notificationId: This is the notification id received as en_id in notification payload
+     - Parameter status: Enum with either SEEN/OPEN
+     - Parameter completionHandler: The closure that will be called when this request finishes. The response will contain response (String), StatusCode (Int) and error (string).
+     */
+    
+    
+    
+    fileprivate func sendNotificationStatus(notificationId: String,status: ENDeliveryStatus, completionHandler: @escaping(String?, Int?, String) -> Void) {
+        
+        let devId = self.getDeviceID()
+        ENPushUtils.saveValueToStorage(devId.getData(), key: ENPUSH_DEVICE_ID)
+        
+        if !checkForCredentials() {
+            
+            ENLogger.sharedInstance.logger(logLevel: .error, message: "Error while sending delivery status - Error is: SDK is not initialized")
+            completionHandler(nil,400, "Error while sending delivery status - Error is: SDK is not initialized")
+            return
+        }
+        
+        let urlBuilder = ENPushUrlBuilder(instanceId: self.guid!, destinationId: self.destinationId!)
+        let resourceURL: String = urlBuilder.getDeliveryUrl(deviceId: devId)
+        let headers = urlBuilder.getHeader()
+
+                        
+        let data: Data?
+        
+
+        let dataString =  "{\"\(ENPUSH_NOTIFICATION_ID)\": \"\(notificationId)\", \"\(ENPUSH_STATUS)\": \"\(status)\", \"\(ENPUSH_PLATFORM)\": \"A\"}"
+        
+        
+        
+        data = dataString.data(using: .utf8)
+        
+        let method = "POST"
+        
+        self.networkRequest.initRest(apikey: self.apikey!, method: method, url: resourceURL, headerParameters: headers, queryItems: nil, messageBody: data)
+                
+        networkRequest.responseVoid { [weak self] (response, statusCode, error) in
+            
+            guard self != nil else {
+                ENLogger.sharedInstance.logger(logLevel: .error, message: "Error while sending delivery status - Error is: Lost class reference")
+                completionHandler(nil, statusCode, "Error while sending delivery status - Error is: Lost class reference")
+
+                return
+            }
+            guard error.isEmpty else {
+                ENLogger.sharedInstance.logger(logLevel: .error, message: "Error while sending delivery status - Error is: \(error.debugDescription)")
+                completionHandler(nil, statusCode, "Error while sending delivery status - Error is: \(error.debugDescription)")
+                return
+            }
+            
+            if statusCode >= 200 && statusCode <= 299 {
+                ENLogger.sharedInstance.logger(logLevel: .error, message: "Delivery status successfully sent - Response is: \(String(describing: response))")
+                completionHandler("Delivery status successfully sent", statusCode , response ?? "")
+            } else {
+                ENLogger.sharedInstance.logger(logLevel: .error, message: "Error while sending delivery status - Error code is:: \(statusCode) and error is: \(String(describing: response))")
+                completionHandler(nil, statusCode, "Error while sending delivery status - Error code is: \(statusCode) and error is: \(String(describing: response))")
+            }
         }
     }
     

@@ -43,6 +43,9 @@ internal let ENPUSH_TOKEN  = "token"
 internal let ENPUSH_PLATFORM  = "platform"
 internal let ENPUSH_USER_ID  = "user_id"
 
+internal let ENPUSH_NOTIFICATION_ID = "notification_id"
+internal let ENPUSH_STATUS = "status"
+
 // Errors
 
 internal let ENPUSH_NETWORK_ERROR = 503
