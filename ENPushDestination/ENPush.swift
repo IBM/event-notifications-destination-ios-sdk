@@ -284,7 +284,7 @@ public class ENPush: NSObject {
         let data: Data?
         
 
-        let dataString =  "{\"\(ENPUSH_NOTIFICATION_ID)\": \"\(notificationId)\", \"\(ENPUSH_STATUS)\": \"\(status)\", \"\(ENPUSH_PLATFORM)\": \"A\"}"
+        let dataString =  "{\"\(ENPUSH_NOTIFICATION_ID)\": \"\(notificationId)\", \"\(ENPUSH_STATUS)\": \"\(status.rawValue)\", \"\(ENPUSH_PLATFORM)\": \"A\"}"
         
         
         
