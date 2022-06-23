@@ -37,6 +37,7 @@ internal class ENPushUrlBuilder: NSObject {
     internal let TAGS = "tags"
     internal let DEVICES = "devices"
     internal let MESSAGES = "messages"
+    internal let DELIVERY = "delivery"
 
     internal let TAGNAME = "tag_name"
     internal let DEVICEID = "device_id"
@@ -171,5 +172,20 @@ internal class ENPushUrlBuilder: NSObject {
         let userAgent = "\(ENPUSH_SDK_NAME)/\(ENPUSH_SDK_VERSION)"
         return [ENPUSH_USER_AGENT: userAgent, ENPUSH_CONTENT_TYPE_KEY: ENPUSH_CONTENT_TYPE_JSON]
         
+    }
+    
+    /**
+     Get delivery url.
+     - Parameter deviceId : deviceId for the Event Notifications service
+     - Returns return the Delivery Status url for deviceid.
+    */
+    func getDeliveryUrl(deviceId: String) -> String {
+        
+        var deviceIdUrl: String = getDevicesUrl()
+        deviceIdUrl += FORWARDSLASH
+        deviceIdUrl += deviceId
+        deviceIdUrl += FORWARDSLASH
+        deviceIdUrl += DELIVERY
+        return deviceIdUrl
     }
 }
