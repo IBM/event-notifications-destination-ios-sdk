@@ -870,9 +870,9 @@ public class ENPush: NSObject {
         self.destinationId = ENPushUtils.getValueFromStorage(key: ENPUSH_DESTINATION_ID)?.getString()
         self.apikey = ENPushUtils.getValueFromStorage(key: ENPUSH_APIKEY)?.getString()
         
-        if self.guid == "" || self.guid == nil || self.destinationId == "" || self.destinationId == nil || self.apikey == "" || self.apikey == nil {
-                return false
-            }
+        if self.guid.isNilOrEmpty || self.destinationId.isNilOrEmpty || self.apikey.isNilOrEmpty {
+            return false
+        }
         return true
     }
     
