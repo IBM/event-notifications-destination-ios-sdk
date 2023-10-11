@@ -5,9 +5,10 @@ matrix:
     - osx_image: xcode13.2
 
 before_install:
-  - rvm install 2.7.0
+  - rvm install 3.2.2
 
 install:
+  - gem install activesupport -v 6.1.7.6
   - gem install cocoapods
 
 script:
