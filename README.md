@@ -122,7 +122,7 @@ Complete the following steps to enable iOS applications to receive notifications
 	enPush.initialize(instanceGUID, destinationID, apiKey)
 	```
 
-	- region : Region of the Event Notifications Instance. eg; `Region.usSouth`, `Region.london`, `Region.sydney`, `Region.frankfurt`, `Region.madrid`
+	- region : Region of the Event Notifications Instance. eg; `Region.usSouth`, `Region.london`, `Region.sydney`, `Region.frankfurt` and `Region.madrid`
 
 ## Register for notifications
 
