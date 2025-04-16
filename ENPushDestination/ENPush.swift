@@ -81,6 +81,26 @@ public class ENPush: NSObject {
         */
         case bnpp = "eu-fr2"
         
+        /**
+        The Toronto IBM Cloud region.
+        */
+        case toronto = "ca-tor"
+        
+        /**
+        The Tokyo IBM Cloud region.
+        */
+        case tokyo = "jp-tok"
+        
+        /**
+        The Osaka IBM Cloud region.
+        */
+        case osaka = "jp-osa"
+        
+        /**
+        The Sao Paulo IBM Cloud region.
+        */
+        case saopaulo = "br-sao"
+        
     }
     
     /// This singleton should be used for all `ENPush` activity.
