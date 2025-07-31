@@ -100,6 +100,11 @@ public class ENPush: NSObject {
         The Sao Paulo IBM Cloud region.
         */
         case saopaulo = "br-sao"
+
+        /**
+        The Montreal IBM Cloud region.
+        */
+        case montreal = "ca-mon"
         
     }
     
