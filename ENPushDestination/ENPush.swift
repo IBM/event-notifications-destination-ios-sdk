@@ -106,6 +106,11 @@ public class ENPush: NSObject {
         */
         case montreal = "ca-mon"
         
+        /**
+        The WashingtonDC IBM Cloud region.
+        */
+        case washingtonDC = "us-east"
+        
     }
     
     /// This singleton should be used for all `ENPush` activity.
