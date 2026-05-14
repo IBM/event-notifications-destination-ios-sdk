@@ -115,6 +115,11 @@ public class ENPush: NSObject {
         The Chennai IBM Cloud region.
         */
         case chennai = "in-che"
+
+        /**
+        The Mumbai IBM Cloud region.
+        */
+        case chennai = "in-mum"
         
     }
     
