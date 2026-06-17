@@ -154,3 +154,26 @@ extension Dictionary {
         return nil
     }
 }
+
+extension Optional where Wrapped == String {
+    
+    /// A Boolean value indicating whether the String is nil or empty.
+    ///
+    /// This computed property returns `true` if the String is either `nil` or an empty string (`""`), and `false` otherwise.
+    /// It provides a convenient way to check for both conditions in a single operation.
+    ///
+    /// Example:
+    /// ```
+    /// let myString: String? = nil
+    /// print(myString.isNilOrEmpty)  // Prints "true"
+    ///
+    /// let myOtherString: String? = ""
+    /// print(myOtherString.isNilOrEmpty)  // Prints "true"
+    ///
+    /// let myNonEmptyString: String? = "Hello"
+    /// print(myNonEmptyString.isNilOrEmpty)  // Prints "false"
+    /// ```
+    var isNilOrEmpty: Bool {
+        return self?.isEmpty ?? true
+    }
+}
